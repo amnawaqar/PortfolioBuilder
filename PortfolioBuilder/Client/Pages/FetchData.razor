@@ -1,0 +1,55 @@
+﻿@page "/fetchdata"
+@using PortfolioBuilder.Shared
+@using PortfolioBuilder.Client.Services.Interfaces
+@inject HttpClient Http
+@inject ICvDetailClientService InterfaceServiceObj;
+@* <link rel="stylesheet" href="styles.css" /> *@
+@* <script src="cvDownload.js"></script> *@
+
+<div class="cv-template">
+    <div class="cv-header">
+        <h1 class="cv-name">@cvDetails.FirstName @cvDetails.LastName</h1>
+        <p class="cv-contact">@cvDetails.ContactNo | @cvDetails.Email</p>
+    </div>
+
+    <div class="cv-section">
+        <h2 class="cv-section-header">Education</h2>
+        <p class="cv-section-content">@cvDetails.Degree</p>
+        <p class="cv-section-content">@cvDetails.Institute</p>
+    </div>
+
+    <div class="cv-section">
+        <h2 class="cv-section-header">Work Experience</h2>
+        <p class="cv-section-content">@cvDetails.JobTitle</p>
+        <p class="cv-section-content">@cvDetails.Company</p>
+        <p class="cv-section-content">From: @cvDetails.FromDate - To: @cvDetails.ToDate</p>
+        <p class="cv-section-content">@cvDetails.Description</p>
+    </div>
+
+    <div class="cv-section">
+        <h2 class="cv-section-header">Skills</h2>
+        <ul class="cv-skills">
+            @foreach (var skill in cvDetails.Skills.Split(','))
+            {
+                <li class="cv-skill">@skill.Trim()</li>
+            }
+        </ul>
+    </div>
+</div>
+
+<button class="cv-download-button">Download PDF</button>
+@code {
+    private CvDto cvDetails = new CvDto();
+
+    protected override async Task OnInitializedAsync()
+    {
+        CvDto retrievedCv = await InterfaceServiceObj.GetCV(2);
+
+        if (retrievedCv != null)
+        {
+            cvDetails = retrievedCv; // Map the retrieved CV to cvDetails
+        }
+    }
+   
+}
+

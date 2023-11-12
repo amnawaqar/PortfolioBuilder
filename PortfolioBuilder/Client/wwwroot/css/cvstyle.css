@@ -1,0 +1,74 @@
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+/* styles.css */
+.cv-template {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cv-name {
+    color: #007bff;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.cv-contact {
+    color: #555;
+    font-size: 16px;
+}
+
+.cv-section-header {
+    color: #333;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.cv-section-content {
+    color: #555;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.cv-skills {
+    list-style: none;
+    padding: 0;
+}
+
+.cv-skill {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px;
+    display: inline-block;
+}
+
+    .cv-skill:hover {
+        background-color: #0056b3;
+    }
+
+.cv-download-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+    .cv-download-button:hover {
+        background-color: #0056b3;
+    }
+
