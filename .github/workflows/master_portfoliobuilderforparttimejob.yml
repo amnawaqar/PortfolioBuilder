@@ -54,4 +54,4 @@ jobs:
           app-name: 'PortfolioBuilderforparttimejob'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_60E83D01BC554787BB093A78BD13ACEF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_618B285872584DD1B7E51283D0C1C9DD }}
