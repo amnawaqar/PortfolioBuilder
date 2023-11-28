@@ -1,9 +1,127 @@
 ﻿@page "/"
+@inject NavigationManager NavigationManager
+
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<main id="main">
 
-Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    <section id="hero" class="hero">
+
+        <img src="assets/img/g.jpg" alt="hhhh">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10">
+                    <h2 data-aos-delay="100">PortfolioBuilder</h2>
+                    <p data-aos-delay="200">Best Solution to Part time Jobs</p>
+                </div>
+                <div class="col-md-auto">
+                    <div class="sign-up-form d-flex">
+                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 btn-lg" type="button" @onclick="NavigateToLogin">
+                            Create instant Cv now
+                        </button>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section><!-- End Hero Section -->
+    <!-- Services Section - Home Page -->
+    <section id="services" class="services">
+
+        <!--  Section Title -->
+        <div class="container section-title">
+            <h2>Services</h2>
+          
+        </div><!-- End Section Title -->
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-6 " data-aos-delay="100">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+                        <div>
+                            <h4 class="title"><a href="services-details.html" class="stretched-link">Time Efficiency</a></h4>
+                            <p class="description">Instant portfolio makers allow you to create a professional-looking portfolio quickly and easily.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Service Item -->
+
+                <div class="col-lg-6 " data-aos-delay="200">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+                        <div>
+                            <h4 class="title"><a href="services-details.html" class="stretched-link">User-Friendly Interface</a></h4>
+                            <p class="description">This makes it easy for individuals without extensive design skills to create polished portfolios</p>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-6 " data-aos-delay="300">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+                        <div>
+                            <h4 class="title"><a href="services-details.html" class="stretched-link">Consistent Design</a></h4>
+                            <p class="description">Portfolio makers often provide design consistency across different sections.</p>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-6 " data-aos-delay="400">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+                        <div>
+                            <h4 class="title"><a href="services-details.html" class="stretched-link">Accessibility and Shareability</a></h4>
+                            <p class="description">easy sharing options, allowing you to share your portfolio link with potential employers, clients, or collaborators</p>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-6 " data-aos-delay="500">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+                        <div>
+                            <h4 class="title"><a href="services-details.html" class="stretched-link">Cost-Effective Solutions</a></h4>
+                            <p class="description"> This makes portfolio makers a budget-friendly option for individuals who want a visually appealing portfolio without significant upfront costs.</p>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-lg-6 " data-aos-delay="600">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+                        <div>
+                            <h4 class="title"><a href="services-details.html" class="stretched-link">No Coding Required</a></h4>
+                            <p class="description"> You can focus on showcasing your work and skills without worrying about the technical aspects of website creation </p>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
+            </div>
+
+        </div>
+
+    </section><!-- End Services Section -->
+    <!-- Team Section - Home Page -->
+
+
+
+</main>
+@code {
+
+
+    private void NavigateToLogin()
+    {
+        NavigationManager.NavigateTo("/Login");
+    }
+
+  
+}
